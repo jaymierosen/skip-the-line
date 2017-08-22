@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import Header from './Header';
 import Cart from './Cart';
 import Wilbur from './Wilbur';
 import Avenue from './Avenue';
@@ -70,11 +69,20 @@ class App extends Component {
 		}
 	}
 	modalOpen() {
-		if(this.state.cjActive === 'not-open') {
+		console.log('working?');
+		if(this.state.modalOpen === 'not-open') {
 			this.setState({
 				modalOpen: 'open'
 			})
 		} else {
+			this.setState({
+				modalOpen: 'not-open'
+			})
+		}
+	}
+	modalClose() {
+		console.log('working?');
+		if(this.state.modalOpen === 'open') {
 			this.setState({
 				modalOpen: 'not-open'
 			})
@@ -85,8 +93,16 @@ class App extends Component {
 			<Router>
 				{/* Router takes only one child element */}
 				<div>
-					<Cart modalOpen={this.state.modalOpen} />
-					<h1 className="title is-uppercase has-text-centered"><Link to="/home">Skip the Line</Link></h1>
+					<Cart modalOpen={this.modalOpen.bind(this)} modalDisplay={this.state.modalOpen} modalClose={this.modalClose.bind(this)} />
+					<header>
+						<section className="hero">
+							<div className="hero-body">
+								<div className="container">
+									<h1 className="title is-uppercase has-text-centered">Skip the Line</h1>
+								</div>
+							</div>
+						</section>
+					</header>
 					<div>
 						<div className="tabs is-centered">
 							<ul>

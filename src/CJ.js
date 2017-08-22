@@ -7,52 +7,52 @@ class Wilbur extends Component {
 				<aside className="menu">
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a>
 							<ul>
-								<li><a>Menu Item</a></li>
-								<li><a>Menu Item</a></li>
-								<li><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 							</ul>
 						</li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a>
 							<ul>
-								<li><a>Menu Item</a></li>
-								<li><a>Menu Item</a></li>
-								<li><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+								<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 							</ul>
 						</li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 					<p className="menu-label">Menu Heading</p>
 					<ul className="menu-list">
-						<li><a>Menu Item</a></li>
+						<li onClick={this.addMenuItem.bind(this)}><a>Menu Item</a></li>
 					</ul>
 				</aside>
 			</div>

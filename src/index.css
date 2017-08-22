@@ -132,12 +132,22 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+header {
+  margin: 30px 0; }
+
+.title {
+  color: #00d1b2; }
+
 .cart-container {
   text-align: right;
   padding: 30px; }
 
 .modal {
-  background: #00d1b2; }
+  background: #00d1b2;
+  position: static;
+  padding: 30px;
+  margin: 0 0 30px 0;
+  color: white; }
 
 .not-open {
   display: none; }
@@ -147,6 +157,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .fa {
   font-size: 30px; }
+
+.menu-list a:hover {
+  background-color: #00d1b2; }
 
 .menu-container {
   padding: 30px; }
