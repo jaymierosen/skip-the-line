@@ -40,5 +40,8 @@ header {
 	padding: 30px;
 }
 .not-active {
-	color: red;
+	border: 1px solid red;
+}
+.is-active {
+	border: 1px solid green;
 }
