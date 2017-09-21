@@ -16,58 +16,24 @@ import './index.css';
 class App extends Component {
 	constructor(){
 		super();
+		// 
 		this.state = {
-			wilburActive: 'not-active',
-			avenueActive: 'not-active',
-			cjActive: 'not-active',
+			activeMenu: null,
 			modalOpen: 'not-open'
 		}
+		/*
+			what we're doing here is binding the context -- `this` -- to the class.
+			`.bind` passes in the context -- `this` -- so that when we use this the function is sent a proper context. 
+			What's a context? Don't worry if you're like WTF! It's some extra-level JS.
+			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+		*/
+		this.modalClose = this.modalClose.bind(this)
+		this.modalOpen = this.modalOpen.bind(this)
 	}
-	wilburActive() {
-		if(this.state.wilburActive === 'not-active') {
-			this.setState({
-				wilburActive: 'is-active',
-				avenueActive: 'not-active',
-				cjActive: 'not-active'
-			})
-		} else {
-			this.setState({
-				wilburActive: 'not-active',
-				avenueActive: 'not-active',
-				cjActive: 'not-active'
-			})
-		}
+	changeActiveMenu() {
+
 	}
-	avenueActive() {
-		if(this.state.avenueActive === 'not-active') {
-			this.setState({
-				avenueActive: 'is-active',
-				wilburActive: 'not-active',
-				cjActive: 'not-active'
-			})
-		} else {
-			this.setState({
-				avenueActive: 'not-active',
-				wilburActive: 'not-active',
-				cjActive: 'not-active'
-			})
-		}
-	}
-	cjActive() {
-		if(this.state.cjActive === 'not-active') {
-			this.setState({
-				cjActive: 'is-active',
-				avenueActive: 'not-active',
-				wilburActive: 'not-active'
-			})
-		} else {
-			this.setState({
-				cjActive: 'not-active',
-				avenueActive: 'not-active',
-				wilburActive: 'not-active'
-			})
-		}
-	}
+
 	modalOpen() {
 		console.log('working?');
 		if(this.state.modalOpen === 'not-open') {
@@ -93,7 +59,8 @@ class App extends Component {
 			<Router>
 				{/* Router takes only one child element */}
 				<div>
-					<Cart modalOpen={this.modalOpen.bind(this)} modalDisplay={this.state.modalOpen} modalClose={this.modalClose.bind(this)} />
+				{/* So, we can bind these bad mammajammas in the class constructor!  */}
+					<Cart modalOpen={this.modalOpen} modalDisplay={this.state.modalOpen} modalClose={this.modalClose} />
 					<header>
 						<section className="hero">
 							<div className="hero-body">
@@ -106,9 +73,9 @@ class App extends Component {
 					<div>
 						<div className="tabs is-centered">
 							<ul>
-								<li id="wilbur" className={this.state.wilburActive} onClick={this.wilburActive.bind(this)}><Link to="/wilbur">Wilbur</Link></li>
-								<li id="avenue" className={this.state.avenueActive} onClick={this.avenueActive.bind(this)}><Link to="/avenue">Avenue Open Kitchen</Link></li>
-								<li id="cj" className={this.state.cjActive} onClick={this.cjActive.bind(this)}><Link to="/cj">CJ&rsquo;s Lunchbox</Link></li>
+								<li id="wilbur"><Link to="/wilbur">Wilbur</Link></li>
+								<li id="avenue"><Link to="/avenue">Avenue Open Kitchen</Link></li>
+								<li id="cj"><Link to="/cj">CJ&rsquo;s Lunchbox</Link></li>
 							</ul>
 						</div>
 						<Router exact path="/" component={Home}/>
